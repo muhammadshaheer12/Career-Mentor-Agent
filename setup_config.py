@@ -19,7 +19,7 @@ external_client = AsyncOpenAI(
 # Initialize the OpenAIChatCompletionsModel with the configure external client
 model = OpenAIChatCompletionsModel(
     openai_client=external_client,
-    model="llama3-70b-8192"
+    model="llama-3.3-70b-versatile"
 )
 
 # Configuration for running Groq model without tracing
