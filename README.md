@@ -51,13 +51,27 @@ An AI-powered **Career Mentor** built with **Chainlit**, **OpenAI Agents SDK**, 
 
 ## ⚡ Quick Start  
 
-1️⃣ **Clone the repository**  
+1️⃣ **Install uv**
+- **Windows (PowerShell)**
+  ```powershell
+  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
+- **macOS / Linux**
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
+- **Verify installation:**
+  ```bash
+  uv --version
+  ```
+
+2️⃣ **Clone the repository**  
 ```bash
 git clone https://github.com/muhammadshaheer12/Career-Mentor-Agent
 cd Career-Mentor-Agent
 ```
 
-2️⃣ **Create and activate a uv virtual environment**
+3️⃣ **Create and activate a uv virtual environment**
 ```bash
 uv venv
 ```
@@ -71,12 +85,17 @@ uv venv
   source .venv/bin/activate
   ```
   
-3️⃣ **Set up environment variables in .env**
+4️⃣ **Install dependencies**
+```bash
+uv add openai-agents python-dotenv chainlit
+```
+
+5️⃣ **Set up environment variables in .env**
 ```
 GROQ_API_KEY=your_groq_api_key
 ```
 
-4️⃣ **Run the app**  
+6️⃣ **Run the app**  
 ```bash
 chainlit run main.py 
 ```
